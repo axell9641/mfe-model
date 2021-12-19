@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Kanto Pokemon</h3>
+
+  <div class="pokemon-list">
+    <div *ngFor="let pokemon of pokemons$ | async" class="pokemon">
+      <div class="pokemon__image-container">
+        <img mat-card-lg-image [src]="pokemon.image" />
+      </div>
+      <h4 class="pokemon__name">{{ pokemon.name | titlecase }}</h4>
+    </div>
+  </div>
+</div>
